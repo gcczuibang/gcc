@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            height:100vh;
+            margin:0;
+            padding:0;
+            display:flex;
+            flex-direction :column;
+             
+        }
+
+        header,footer{
+            flex-grow:1;
+            
+        }
+        
+
+        header{
+            background:red;
+        }
+        footer{
+            background:blue;
+            order:1;
+        }
+        section{
+            flex-grow:6;
+            background:orange;
+            display:flex;
+            flex-direction:row;
+        }
+        nav{
+            flex-grow:1;
+            background:pink;
+        }
+        aside{
+            flex-grow:1;
+            background:pink;
+        }
+        main{
+            flex-grow:3;
+        }
+
+        #box{ display:flex;
+           
+            flex-direction :row;
+            height:25px;
+           
+        }
+        .item{   width:80px;
+             border:1px solid black;
+             background:green; 
+             margin-left:10px;
+             text-align:center;
+                
+        }
+     header{        display:flex;
+                   flex-direction :row;
+                   align-items:flex-end;
+                   justify-content:center;
+     }
+   
+       .a,.b,.c,.d{
+         
+           width:100%;
+           height:60px;
+           border:1px solid black;
+           background:green;
+           /*flex-direction:column;
+           flex-grow:1;*/
+           
+       }
+     .A{
+          display:flex;
+          justify-content:space-around;
+      
+     }
+       
+     
+    </style>
+</head>
+<body>
+    <header><div id="box">
+        <div class="item">手机首页</div>
+        <div class="item">手机通信</div>
+         <div class="item">手机配件</div>
+         <div class="item">以旧换新</div>
+         <div class="item">手机社区</div>
+         <div class="item">玩3c</div>
+         <div class="item">手机数码</div>
+         </div>
+    </header>
+    <footer></footer>
+    <section>
+        <nav>  
+             <div class="a">
+                <div class="left1">热门推荐</div>
+                <div class="A">
+                <div class="left">小米</div>
+                <div class="left">360</div>
+                <div class="left">荣耀</div></div>
+               <div class="A">
+                <div class="left">oppo</div>
+                <div class="left">华为</div>
+                <div class="left">魅族</div></div>
+                </div>
+                <div class="b">
+                <div class="left1">手机通信</div>
+                <div class="A">
+                <div class="left">全部手机</div>
+                <div class="left">以旧换新</div>
+                <div class="left">快速充电</div></div>
+                <div class="A">
+                <div class="left">拍照神器</div>
+                <div class="left">双卡双待</div>
+                <div class="left">指纹识别</div></div>
+                </div>
+                <div class="c">
+                <div class="left1">运营商</div>
+                <div class="A">
+                <div class="left">营业厅</div>
+                <div class="left">选号码</div>
+                <div class="left">4G套餐</div></div>
+                <div class="A">
+                <div class="left">买手机</div>
+                <div class="left">立即充值</div>
+                <div class="left">乐豆卡</div></div>
+                </div>
+                <div class="d">
+                <div class="left1">手机配件</div>
+                <div class="A">
+                <div class="left">移动电源</div>
+                <div class="left">蓝牙耳机</div>
+                <div class="left">手机壳</div></div>
+                <div class="A">
+                <div class="left">手机贴膜</div>
+                <div class="left">数据线</div>
+                <div class="left">手机支架</div></div>
+                </div>
+
+        </nav>
+        <main></main>
+        <aside></aside>
+    </section>
+</body>
+</html>
