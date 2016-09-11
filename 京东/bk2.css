@@ -1,0 +1,252 @@
+ .inner{
+            width:540px;
+            height:360px;
+            position:absolute;
+            top:0;
+            left:240px;
+            background-color:rgba(255,255,255,0.7);
+            display:none;
+        }
+.spb{
+     width:540px;
+            height:360px;
+            position:absolute;
+            top:200px;
+            left:240px;
+            background-color:rgba(255,255,255,1);
+            /*display:none;*/
+}    
+
+.v{    position:absolute;
+         width:300px;
+            height:260px;
+            background-color:#F1F1F1;
+            z-index: 100;
+            top:29px;
+            left:733px;
+            display:none;
+} 
+.v1a{
+    position:absolute;
+     width:100px;
+            height:100px;
+            left:10px;
+}
+.v1b{
+    position:absolute;
+     width:150px;
+      height:50px;
+      left:110px;
+      top:29px;
+      line-height:24px;
+}
+
+.v2a{
+     position:absolute;
+     width:130px;
+      height:50px;
+      top:130px;
+      left:10px;
+      line-height:24px;
+       list-style-type:none;
+}
+.v2b{
+     position:absolute;
+     width:150px;
+      height:50px;
+      top:130px;
+      left:160px;
+      line-height:24px;
+       list-style-type:none;
+}
+
+.w1,.w2,.w3,.w4{
+     position:absolute;
+         width:1008px;
+            height:488px;
+            background-color:white;
+            z-index:101;
+            top:174px;
+            left:257px;
+            border:2px solid #b61d1d;
+            border-left:0px;
+            display:none;
+}
+
+
+.w1a,.w1b,.w1c,.w2a,.w2b,.w2c,.w3a,.w3b,.w3c{
+    width:300px;
+         height:20px;
+       
+}
+.tbyb{
+transform-style: preserve-3d;
+perspective: 500px;
+
+}
+.tbyb img{
+    position:absolute;
+     left:300px;
+     top:9px;
+     background-color:#ccc;
+   transform:rotate(90deg);
+}
+
+/*滑动条*/
+ .container{
+            width:40px;
+            height:200px;
+            position:absolute;
+            left:10px;
+            bottom:20px;
+        }
+        .box{
+            width:40px;
+            height:40px;
+            line-height:40px;
+            text-align:center;
+            border:1px solid #ccc;
+        }
+
+
+
+
+
+
+.x1{
+position:absolute;
+
+}
+
+.dbt3a1 span{
+    position:absolute;
+}
+
+
+.dbt4{
+    top:700px;
+    /*top:570px;*/
+   width:261px;
+     height:230px;
+   position:absolute;
+ background-color:white;
+ color:#666;
+
+}
+
+.dbt4a{
+     width:258px;
+     height:36px;
+     border:1px solid #ccc;
+      border-bottom:0px;
+       border-top:0px;
+       
+}
+
+.dbt4a ul{
+     position:absolute;
+         top:-16px;
+         left:-40px;
+    text-align:center;
+    line-height:33px; 
+}
+.dbt4a li{
+     width:64px;
+     height:34px;
+      border:1px solid #ccc;
+      border-right:0px;
+      float:left;
+      list-style-type:none;
+      font-size:4px;
+    
+}
+
+.dbt4b{
+     width:258px;
+     height:194px;
+     border:1px solid #ccc;
+     position:absolute;
+      border-top:0px;
+     
+       
+}
+.d4tb1{
+     width:258px;
+     height:194px;
+    position:absolute;
+    z-index: 1;
+}
+.t4b1a{
+     width:258px;
+     height:30px;  
+}
+.t4b1a span{
+     position:relative;
+     left:20px;
+     top:10px;
+ font-size:4px;
+  margin-right:10px;
+}
+  
+
+.t4b1b{
+    position:relative;
+    width:200px;
+     height:30px;  
+      left:20px;
+       top:10px;
+}  
+
+.t4b1b input{
+    width:120px;
+    height:14px; 
+
+}
+
+.t4b1c{
+    position:relative;
+    width:200px;
+     height:30px;  
+      left:20px;
+       top:10px;
+} 
+
+.t4b1c select{
+    width:124px;
+    height:20px; 
+} 
+
+.t4b1d{
+     position:relative;
+     color:white;
+  width:80px;
+    height:30px; 
+ background-color:red;
+text-align:center;
+line-height:30px; 
+ left:20px;
+       top:10px;
+       border-radius:5px;
+}
+
+.d4tb2{
+     width:258px;
+     height:194px;
+    position:absolute;
+    z-index: 1;
+    background-color:red;
+}
+.d4tb3{
+     width:258px;
+     height:194px;
+    position:absolute;
+    z-index: 1;
+    background-color:#653;
+}
+.d4tb4{
+     width:258px;
+     height:194px;
+    position:absolute;
+    z-index: 1;
+    background-color:#543;
+}
