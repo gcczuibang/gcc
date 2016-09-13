@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="600" height="500"></canvas>
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    ctx.font="italic bold 40px Arial";
+
+    ctx.textAlign="center";
+    ctx.textBaseline="top";
+    ctx.strokeText("canvas",250,50);
+    ctx.strokeStyle="purple";
+    ctx.beginPath();
+    ctx.arc(250,50,5,0,Math.PI*2,false);
+    ctx.stroke();
+
+    ctx.textAlign="center";
+    ctx.textBaseline="middle";
+    ctx.strokeText("canvas",50,50);
+    ctx.strokeStyle="purple";
+    ctx.beginPath();
+    ctx.arc(50,50,5,0,Math.PI*2,false);
+    ctx.stroke();
+
+    ctx.textAlign="center";
+    ctx.textBaseline="bottom";
+    ctx.strokeText("canvas",450,50);
+    ctx.strokeStyle="purple";
+    ctx.beginPath();
+    ctx.arc(450,50,5,0,Math.PI*2,false);
+    ctx.stroke();
+
+
+</script>
+</body>
+</html>

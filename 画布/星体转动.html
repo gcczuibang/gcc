@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var cv = document.createElement("canvas");
+    var ctx = cv.getContext("2d");
+    var w=window.innerWidth;
+    var h=window.innerHeight;
+    var sun=new Image(),
+        earth=new Image(),
+            moon=new Image();
+
+    function loadImage(){
+        sun.src = "Canvas_sun.png";
+        earth.src = "Canvas_earth.png";
+        moon.src = "Canvas_moon.png";
+    }
+
+    function init(){
+        document.body.appendChild(cv);
+        cv.width=w;
+        cv.height=h;
+        loadImage();
+    }
+
+    function draw(){
+        ctx.clearRect(0,0,w,h);
+        ctx.globalCompositeOperation="destination-over";
+        ctx.save();
+        ctx.translate(150,150);
+//        地球原点坐标轴移动到太阳中心
+        var date=new Date();
+        ctx.rotate(Math.PI*2/60*date.getSeconds()+Math.PI*2/60000*date.getMilliseconds());
+//        地球自转
+        ctx.translate(105,0);
+//        自传后移动到自传轨迹上
+        ctx.drawImage(earth,-12,-12);
+//        地球图片中心放到坐标原点上
+
+        ctx.rotate(Math.PI*2/10*date.getSeconds()+Math.PI*2/10000*date.getMilliseconds());
+//        月球自传
+        ctx.translate(25,0);
+//        自传后移动到自传轨迹上
+        ctx.drawImage(moon,-4,-4);
+        ctx.restore();
+
+        ctx.drawImage(sun,0,0);
+        requestAnimationFrame(draw);
+    }
+    requestAnimationFrame(draw);
+    init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var cv = document.createElement("canvas"),
+            ctx = cv.getContext("2d"),
+            w = window.innerWidth,
+            h = window.innerHeight,
+            particles = [],
+            px = w/2,
+            py = h/2;
+
+    function init(){
+        document.body.appendChild(cv);
+        cv.width = w;
+        cv.height = h;
+        requestAnimationFrame(draw);
+    }
+
+    function Particle(x,y){
+        this.x = x;
+        this.y = y;
+        this.r = Math.random()*10;
+        this.vy = -5;
+        this.vx = Math.random()*4 - 2;
+//        this.gravity = 0.1;
+//        this.color = 'rgba(51,153,255,0.6)';
+        this.color = 'rgba('+Math.floor(Math.random()*255)+','+
+                Math.floor(Math.random()*255)+','+
+                Math.floor(Math.random()*255)+','+
+                Math.random()+')';
+    }
+    Particle.prototype.render = function(ctx){
+        ctx.save();
+        ctx.beginPath();
+        ctx.fillStyle = this.color;
+        ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+        ctx.fill();
+        ctx.restore();
+    }
+    Particle.prototype.update = function(){
+        this.y += this.vy;
+        this.x += this.vx;
+        this.vy *= 0.99;
+        this.vy += 0.25;
+        if(this.x+this.vx > w || this.x + this.vx < 0){
+            this.vx = -this.vx;
+        }
+        if(this.y+this.vy > h || this.y + this.vy < 0){
+            this.vy = -this.vy;
+        }
+    }
+
+    function draw(){
+        for(var i=0;i<5;i++){
+            var particle =  new Particle(px,py);
+            particles.push(particle);
+        }
+
+
+        ctx.clearRect(0,0,w,h);
+        var len = particles.length;
+
+        for(var i=0;i<len;i++){
+            particles[i].update();
+            particles[i].render(ctx);
+        }
+
+        if(len>=1000){
+            for(var i=0;i<5;i++){
+                particles.shift();
+            }
+        }
+        requestAnimationFrame(draw);
+    }
+
+    cv.onmousemove = function(e){
+        px = e.clientX;
+        py = e.clientY;
+    }
+    init();
+</script>
+</body>
+</html>
